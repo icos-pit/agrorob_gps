@@ -14,7 +14,7 @@
         qzss: true
         sbas: true
 
-      device: /dev/usb_ublox
+      device: /dev/ttyACM0
       frame_id: gps
       rate: 10.0                    # in Hz
       nav_rate: 1                 # [# of measurement cycles], recommended 1 Hz, may 
