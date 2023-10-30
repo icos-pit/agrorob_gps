@@ -1,6 +1,7 @@
-ublox_rover:
+# Configuration Settings for C94-M8P device
+ublox_gps_node:
   ros__parameters:
-    debug: 1                   # Range 0-4 (0 means no debug statements will print)    
+    debug: 1                   # Range 0-4 (0 means no debug statements will print)
 
     #save:
     #  mask: 3103                # Save I/O, Message, INF Message, Nav, Receiver 
@@ -13,9 +14,9 @@ ublox_rover:
       qzss: false
       sbas: false
 
-    device: /dev/ublox_rover
-    frame_id: ublox_rover
-    rate: 10.0                  # in Hz
+    device: /dev/ttyACM0
+    frame_id: gps
+    rate: 10.0                     # in Hz
     nav_rate: 1                 # [# of measurement cycles], recommended 1 Hz, may 
                                 # be either 5 Hz (Dual constellation) or 
                                 # 8 Hz (GPS only)
@@ -25,32 +26,32 @@ ublox_rover:
                                 # Max Vertical Velocity: 100 m/s
     fix_mode: auto
     enable_ppp: false           # Not supported by C94-M8P
-    dr_limit: 0    
+    dr_limit: 0
 
     usb:
-      in: 3                     # UBX + NMEA | RTCM3 is disabled as it should come from UART
-      out: 1                    # UBX    
+      in: 35
+      out: 1
 
     uart1:
       baudrate: 460800
-      in: 32                    # RTCM3
-      out: 0                    # No output    
+      in: 0                      # No Input on UART
+      out: 32                    # RTCM 3
 
-    dgnss_mode: 3               # Fixed mode    
+    dgnss_mode: 3               # Fixed mode
 
     inf: 
-      all: true                 # Whether to display all INF messages in console    
+      all: true                 # Whether to display all INF messages in console
 
     # Enable u-blox message publishers
     publish:
       aid:
-        hui: false    
+        hui: false
 
       nav:
         posecef: false
-        relposned: true    
+        relposned: true
 
       rxm:
-        rtcm: true    
+        rtcm: true
 
     tmode3: 0
