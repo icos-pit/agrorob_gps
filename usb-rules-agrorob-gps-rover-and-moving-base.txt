@@ -1,0 +1,2 @@
+SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="1548", ENV{ID_MODEL_ID}=="01aa", SYMLINK+="ublox_rover"
+SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="1546", ENV{ID_MODEL_ID}=="01a9", SYMLINK+="ublox_moving_base"

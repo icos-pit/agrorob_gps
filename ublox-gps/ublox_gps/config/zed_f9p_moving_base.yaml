@@ -9,8 +9,9 @@ ublox_moving_base:
       qzss: false
       sbas: false
     device: /dev/ublox_moving_base
+    # device: /dev/ttyACM1
     frame_id: ublox_moving_base
-    rate: 10.0                     # in Hz
+    rate: 10.0                  # in Hz
     nav_rate: 1                 # [# of measurement cycles], recommended 1 Hz, may 
                                 # be either 5 Hz (Dual constellation) or 
                                 # 8 Hz (GPS only)

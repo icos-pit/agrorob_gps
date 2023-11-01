@@ -14,6 +14,7 @@ ublox_rover:
       sbas: false
 
     device: /dev/ublox_rover
+    # device: /dev/ttyACM0
     frame_id: ublox_rover
     rate: 10.0                  # in Hz
     nav_rate: 1                 # [# of measurement cycles], recommended 1 Hz, may 
