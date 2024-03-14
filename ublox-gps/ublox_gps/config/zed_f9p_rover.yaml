@@ -29,7 +29,7 @@ ublox_rover:
     dr_limit: 0    
 
     usb:
-      in: 3                     # UBX + NMEA | RTCM3 is disabled as it should come from UART
+      in: 35                     # UBX + NMEA | RTCM3 is disabled as it should come from UART
       out: 1                    # UBX    
 
     uart1:
